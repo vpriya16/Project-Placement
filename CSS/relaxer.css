@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+#relaxer {
+  background: #224941 url('../Images/Relaxer.jpg') no-repeat center center/cover;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#relaxer h1{
+  font-size: 35px;
+}
+
+.container_relaxer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  position: relative;
+  transform: scale(1);
+}
+
+.circle {
+  background-color: #010f1c;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.gradient-circle {
+  background: conic-gradient(
+    #7A0C31 0%,
+    #A20030 40%,
+    #fff 40%,
+    #fff 60%,
+    #6D1E8F 60%,
+    #552472 100%
+  );
+  height: 320px;
+  width: 320px;
+  z-index: -2;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.pointer {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: block;
+}
+
+.pointer-container {
+  position: absolute;
+  top: -40px;
+  left: 140px;
+  width: 20px;
+  height: 190px;
+  animation: rotate 7.5s linear forwards infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container_relaxer.grow {
+  animation: grow 3s linear forwards;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.container_relaxer.shrink {
+  animation: shrink 3s linear forwards;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Mobile view */
+
+
+@media only screen and (max-width:600px){
+    #relaxer h1{
+      font-size: 20px;
+    }
+    .container_relaxer{
+        height: 225px;
+        width: 225px;
+    }
+    .circle{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    .gradient-circle{
+      height: 240px;
+      width: 240px;
+        top: -8px;
+        left: -8px;
+    }
+    .pointer{
+      height: 15px;
+      width: 15px;
+    }
+    .pointer-container{
+      width: 15px;
+      height: 142.5px;
+      top: -30px;
+      left: 105px;
+    }
+
+}

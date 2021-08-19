@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="CSS/relaxer.css" />
+    <link rel="stylesheet" href="CSS/music_player.css">
+    <link rel="stylesheet" href="CSS/outer_section.css">
+    <link rel="stylesheet" href="CSS/weather.css">
+    <link rel="stylesheet" href="CSS/covid.css">
+    <title>Doc</title>
+</head>
+<body>
+
+    <section id="top_sec">
+
+        <!-- Section-1 Relaxer -->
+        <section id="relaxer">
+            <h1>Relaxer</h1>
+            
+            <div class="container_relaxer" id="container_relaxer">
+                <div class="circle"></div>
+            
+                <p id="text"></p>
+            
+                <div class="pointer-container">
+                    <span class="pointer"></span>
+                </div>
+            
+                <div class="gradient-circle"></div>
+            </div>
+        </section>
+
+        
+        <!-- Section-2 Music Player -->
+
+        <section id="music_player">
+            <h1 id="head-music">Music-Player</h1>
+            <div class="wrapper">
+                <div class="top-bar">
+            
+                    <span style="margin: auto;">Now Playing</span>
+
+                </div>
+                <div class="img-area">
+                    <img src="  " alt="">
+                </div>
+                <div class="song-details">
+                    <p class="name"></p>
+                    <p class="artist"></p>
+                </div>
+                <div class="progress-area">
+                    <div class="progress-bar">
+                        <audio id="main-audio" src=""></audio>
+                    </div>
+                    <div class="song-timer">
+                        <span class="current-time">0:00</span>
+                        <span class="max-duration">0:00</span>
+                    </div>
+                </div>
+                <div class="controls">
+                    <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+                    <i id="prev" class="material-icons">skip_previous</i>
+                    <div class="play-pause">
+                        <i class="material-icons play">play_arrow</i>
+                    </div>
+                    <i id="next" class="material-icons">skip_next</i>
+                    <i id="more-music" class="material-icons">queue_music</i>
+                </div>
+                <div class="music-list">
+                    <div class="header">
+                        <div class="row">
+                            <i class="list material-icons">queue_music</i>
+                            <span>Music list</span>
+                        </div>
+                        <i id="close" class="material-icons">close</i>
+                    </div>
+                    <ul>
+                        <!-- here li list are coming from js -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section-3 Weather App -->
+        
+        <section id="weather-top">
+                <h1 id="weather-head"> Weather </h1>
+                <div class="app-main">
+                <div class="searchInputBox">
+                    <input type="text" id="input-box" class="input-box" placeholder="Enter city name..." autocomplete="off">
+                </div>
+            
+                <div class="weather-body">
+                    <div class="location-details">
+                        <div class="city" id="city">Amravati, IN</div>
+                        <div class="date" id="date">10 June (Wednesday), 2020</div>
+                    </div>
+            
+                    <div class="weather-status">
+                        <div class="temp" id="temp">34&deg;C</div>
+                        <div class="min-max" id="min-max">32&deg;C (min) / 34&deg;C (max)</div>
+                        <div class="weather" id="weather">Clear</div>
+                        <div id="img"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section-4 Covid-19 Tracker -->
+        <section id="covid-header">
+            <h1 id="covid-heading">Covid-19 Tracker</h1>
+            <header>
+                <div class="row">
+                    <div class="wordlwide">
+                        <div class="container">
+                            <h1 class="stats_head">Worldwide Covid Statistics</h1>
+                            <div class="world__status">
+                                <div class="status__item">
+                                    <h2>0</h2>
+                                    <p class="confirmed">confirmed</p>
+                                </div>
+                                <div class="status__item">
+                                    <h2>0</h2>
+                                    <p class="deaths">deaths</p>
+                                </div>
+                                <div class="status__item">
+                                    <h2>0</h2>
+                                    <p class="recovered">recovered</p>
+                                </div>
+                            </div>
+                            <div class="image">
+                                <img src="img/protective-clothing-spray.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="philippines">
+                        <div class="container">
+                            <h1 class="stats_head">India Covid Statistics</h1>
+                            <div class="phil__status">
+                                <div class="status__item">
+                                    <h2>0</h2>
+                                    <p class="confirmed">confirmed</p>
+                                </div>
+                                <div class="status__item">
+                                    <h2>0</h2>
+                                    <p class="deaths">deaths</p>
+                                </div>
+                                <div class="status__item">
+                                    <h2>0</h2>
+                                    <p class="recovered">recovered</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="img/disinfect-protective.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="search">
+                <div class="container">
+                    <div class="search__wrapper">
+                        <form id="covidSearch">
+                            <h3>Search by country</h3>
+                            <div class="search__container">
+                                <input type="text" id="search" placeholder="Search" />
+                                <button type="submit">Search</button>
+                            </div>
+                            <!-- <img class="loader" src="img/loader.gif" alt="" /> -->
+                        </form>
+                    </div>
+                    <div class="search__wrapper">
+                        <div class="search__result">
+                            <!-- <div class="flag">
+                        <img src="https://disease.sh/assets/img/flags/ph.png" alt="" />
+                        </div>
+                        <ul>
+                        <li>
+                            Cases: 4,256,729 | Today: 4,404 | Active: 2,439,768 </br>
+                            Deaths: 287,355 | Today: 218 </br>
+                            Recovered: 1,529,606 | Critical 46,945
+                            </p>
+                        </li>
+                        </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <!-- Js files -->
+    
+    <script src="JS/relaxer.js"></script>
+    <script src="JS/music-list.js"></script>
+    <script src="JS/music_player.js"></script>
+    <script src="JS/weather.js"></script>
+    <script src="JS/countUp.min.js"></script>
+    <script src="JS/covid.js"></script>
+</body>
+</html>
